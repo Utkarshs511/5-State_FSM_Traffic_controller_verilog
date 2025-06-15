@@ -1,4 +1,4 @@
-# 🚦 5-State FSM Traffic Controller (Verilog)
+# 5-State FSM Traffic Controller (Verilog)
 
 ## Overview
 
