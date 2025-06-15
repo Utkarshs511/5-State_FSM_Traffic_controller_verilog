@@ -39,8 +39,8 @@ The controller operates in 5 distinct states:
 
 ## Files Included
 
-- `traffic_controller.v` — Verilog module containing the FSM logic
-- `testbench.v` — Testbench for simulation and verification
+- `traffic.v` — Verilog module containing the FSM logic
+- `traffic_tb.v` — Testbench for simulation and verification
 
 ## Tools Used
 
