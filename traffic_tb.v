@@ -44,44 +44,43 @@ module traffic_tb();
 		.traffic(traffic)
 	);
 	always begin
-        #5 clk = ~clk;  // 100 MHz clock
+        #5 clk = ~clk;
     end
 
 	initial begin
-		// Initialize Inputs
+		
 		clk = 0;
 		reset = 1;
 		pedestrian_button = 0;
 		emergency_button = 0;
 
-		// Wait 10 ns for global reset to finish
+		
 		#10 reset=0;
         
-		// Add stimulus here
-		// Wait for RED light time
+		
         #3500;
 
-        // Test pedestrian button press
+        
         pedestrian_button = 1;
         #10 pedestrian_button = 0;
 
-        // Wait for pedestrian crossing time
+        
         #7500;
 
-        // Test emergency button press
+       
         emergency_button = 1;
         #10 emergency_button = 0;
 
-        // Wait for emergency mode to complete
+      
         #700;
-		  // Test regular transition back to normal cycle
+		 
         #1000;
 
         // End of test
         $stop;
     end
 
-    // Display state changes
+  
     initial begin
         $monitor("Time = %0d, Traffic = %b, Pedestrian Light = %b, Emergency Light = %b, Pedestrian Button = %b, Emergency Button = %b", 
                   $time, traffic, pedestrian_light, emergency_light, pedestrian_button, emergency_button);
