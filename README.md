@@ -45,4 +45,4 @@ The controller operates in 5 distinct states:
 ## Tools Used
 
 - Verilog HDL
-- Simulation software (ModelSim, Vivado, Quartus Prime, etc.)
+- Xilinx Vivado (Design, Synthesis, Implementation, and Simulation)
